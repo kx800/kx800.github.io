@@ -324,7 +324,7 @@ section ul li a {
 }
 
 .back a {
-  color: inherit;
+  color: var(--font-color-inv);
 }
 
 .back a:hover{
