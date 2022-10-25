@@ -1,75 +1,194 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Cas</title>
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <div id="container">
-      <main>
-        <header>
-          <nav id="navbar">
-              <ul>
-                  <li><a class="nav-link" href="#about">About</a></li>
-                  <li><a class="nav-link" href="#skills">Skills</a></li>
-                  <li><a class="nav-link" href="#contact">Contact</a></li>
-                  <li>
-                    <div class="theme-switch-wrapper">
-                      <label class="theme-switch" for="checkbox">
-                        <input type="checkbox" id="checkbox" />
-                        <div class="slider round"></div>
-                      </label>
-                 </div>
-                  </li>
-              </ul>
-          </nav>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Cassio's Portfolio</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Simple line icons-->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.5.5/css/simple-line-icons.min.css" rel="stylesheet" />
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <a class="menu-toggle rounded" href="#"><i class="fas fa-bars"></i></a>
+        <nav id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand"><a href="#page-top">Navigation</a></li>
+                <li class="sidebar-nav-item"><a href="#page-top">Home</a></li>
+                <li class="sidebar-nav-item"><a href="#about">About</a></li>
+                <li class="sidebar-nav-item"><a href="#services">Services</a></li>
+                <li class="sidebar-nav-item"><a href="#portfolio">Portfolio</a></li>
+                <li class="sidebar-nav-item"><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <!-- Header-->
+        <header class="masthead d-flex align-items-center">
+            <div class="container px-4 px-lg-5 text-center">
+                <h1 class="mb-1">Hi! I'm <span>Cassio</span></h1>
+                <h3 class="mb-5">Web Designer / Frontend Developer</h3>
+                <a class="btn btn-primary btn-xl" href="#about">About</a>
+            </div>
         </header>
-        <section id="intro">
-          <h3>Hi, I'm</h3>
-          <h1>Cassio</h1>
-          <h2>Frontend Developer &</h2>
-          <h2>Web Designer</h2>
+        <!-- About-->
+        <section class="content-section bg-light" id="about">
+            <div class="container px-4 px-lg-5 text-center">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-lg-10">
+                        <h2 class="mb-4">I am a Web Designer / Frontend Developer who is passionate about web technologies. </h2>
+                        <p class="lead mb-5">
+                            My aim is to build high-quality websites and applications that are responsive and user-friendly.
+                            <br>
+                            You can find a list of the services I offer below.
+                        </p>
+                        <!-- <a class="btn btn-dark btn-xl" href="#services">Skills</a> -->
+                        <a class="btn btn-primary btn-xl"" href="#services">Services</a>
+                    </div>
+                </div>
+            </div>
         </section>
-        <section id="about">
-          <h5>About</h5>
-          <article>I am a self-taught Web Developer/Designer who is passionate about learning new technologies.
-            <br>My aim is to build high quality websites and web applications that are responsive and user-friendly.
-            <br>You can find the list of my top skills below.
-          </article>
+        <!-- Services-->
+        <section class="content-section bg-primary text-white text-center" id="services">
+            <div class="container px-4 px-lg-5">
+                <div class="content-section-heading">
+                    <!-- <h3 class="mb-0">Services</h3> -->
+                    <h2 class="mb-5">Services</h2>
+                </div>
+                <div class="row gx-4 gx-lg-5">
+                    <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
+                        <span class="service-icon rounded-circle mx-auto mb-3"><i class="icon-layers"></i></span>
+                        <h4><strong>UX/UI Design</strong></h4>
+                        <p class="text-faded mb-0">I use Figma to develop user interfaces.</p>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
+                        <span class="service-icon rounded-circle mx-auto mb-3"><i class="icon-screen-desktop"></i></span>
+                        <h4><strong>Front-End Development</strong></h4>
+                        <p class="text-faded mb-0">Semantic HTML, CSS, SASS and Javascript code.</p>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-5 mb-md-0">
+                        <span class="service-icon rounded-circle mx-auto mb-3"><i class="icon-screen-smartphone"></i></span>
+                        <h4><strong>Responsive Web Design</strong></h4>
+                        <p class="text-faded mb-0">
+                            Websites that work on any device.
+                        </p>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <span class="service-icon rounded-circle mx-auto mb-3"><i class="icon-picture"></i></span>
+                        <h4><strong>Graphic Design</strong></h4>
+                        <p class="text-faded mb-0">Graphics creation and Image editing using Photoshop.</p>
+                    </div>
+                </div>
+            </div>
         </section>
-        <section id="skills">
-          <h5>Skills</h5>
-        <ul>
-            <li><a>HTML</a></li>
-            <li><a>CSS</a></li>
-            <li><a>SASS</a></li>
-            <li><a>Bootstrap</a></li>
-            <li><a>JavaScript</a></li>
-            <li><a>Figma</a></li>
-            <li><a>Adobe Photoshop</a></li>
-            <li><a>Git &amp; GitHub</a></li>
-        </ul>
+        <!-- Callout-->
+        <section class="callout">
+            <div class="container px-4 px-lg-5 text-center">
+                <h2 class="mx-auto mb-5">
+                    Feel free to <em>Contact</em>
+                    me.
+                </h2>
+                <p class="lead mb-5">
+                    Let's Talk!
+                </p>
+                <a class="btn btn-primary btn-xl" href="href="mailto:cassioreis@gmail.com?
+                &subject=contact from portfolio"">Send me an Email</a>
+            </div>
         </section>
-        <section id="contact">
-          <article>
-            <h5>Contact</h5>
-            <a class="contact_btn" href="mailto:cassioreis@gmail.com?
-                     &subject=contact from portfolio">
-            </a>
-        </article>
-        <br>
-        <div class="tinted-image"></div>
+        <!-- Portfolio-->
+ <!--        <section class="content-section" id="portfolio">
+            <div class="container px-4 px-lg-5">
+                <div class="content-section-heading text-center">
+                    <h3 class="text-secondary mb-0">Portfolio</h3>
+                    <h2 class="mb-5">Recent Projects</h2>
+                </div>
+                <div class="row gx-0">
+                    <div class="col-lg-6">
+                        <a class="portfolio-item" href="#!">
+                            <div class="caption">
+                                <div class="caption-content">
+                                    <div class="h2">Stationary</div>
+                                    <p class="mb-0">A yellow pencil with envelopes on a clean, blue backdrop!</p>
+                                </div>
+                            </div>
+                            <img class="img-fluid" src="assets/img/portfolio-1.jpg" alt="..." />
+                        </a>
+                    </div>
+                    <div class="col-lg-6">
+                        <a class="portfolio-item" href="#!">
+                            <div class="caption">
+                                <div class="caption-content">
+                                    <div class="h2">Ice Cream</div>
+                                    <p class="mb-0">A dark blue background with a colored pencil, a clip, and a tiny ice cream cone!</p>
+                                </div>
+                            </div>
+                            <img class="img-fluid" src="assets/img/portfolio-2.jpg" alt="..." />
+                        </a>
+                    </div>
+                    <div class="col-lg-6">
+                        <a class="portfolio-item" href="#!">
+                            <div class="caption">
+                                <div class="caption-content">
+                                    <div class="h2">Strawberries</div>
+                                    <p class="mb-0">Strawberries are such a tasty snack, especially with a little sugar on top!</p>
+                                </div>
+                            </div>
+                            <img class="img-fluid" src="assets/img/portfolio-3.jpg" alt="..." />
+                        </a>
+                    </div>
+                    <div class="col-lg-6">
+                        <a class="portfolio-item" href="#!">
+                            <div class="caption">
+                                <div class="caption-content">
+                                    <div class="h2">Workspace</div>
+                                    <p class="mb-0">A yellow workspace with some scissors, pencils, and other objects.</p>
+                                </div>
+                            </div>
+                            <img class="img-fluid" src="assets/img/portfolio-4.jpg" alt="..." />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+        <!-- Call to Action-->
+        <section class="content-section bg-primary text-white">
+            <div class="container px-4 px-lg-5 text-center">
+                <h2 class="mb-4">To view or download my resume:</h2>
+                <a class="btn btn-primary btn-xl" href="https://1drv.ms/b/s!ApCXI0QlACEvgRBfQoIl0m4l_jrS?e=MiAhFF" target="_blank">Click here</a>
+            </div>
         </section>
-        <div class="back"><a href="#navbar">back to top</a></div>
-        <footer>
-          <p>Designed and built by Cassio.</p>
-          <p>2022</p>
+        <!-- Map-->
+<!--         <div class="map" id="contact">
+            <iframe src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A&amp;output=embed"></iframe>
+            <br />
+            <small><a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A"></a></small>
+        </div> -->
+        <!-- Footer-->
+        <footer class="footer text-center">
+            <div class="container px-4 px-lg-5">
+                <ul class="list-inline mb-5">
+                    <li class="list-inline-item">
+                        <a class="social-link rounded-circle text-white mr-3" href="https://github.com/kx800"><i class="icon-social-github"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a class="social-link rounded-circle text-white" href="https://www.linkedin.com/in/cassio-r-89926b236/"><i class="icon-social-linkedin"></i></a>
+                    </li>
+                </ul>
+                <p class=" small mb-0">2022</p>
+            </div>
         </footer>
-      </main>
-    </div>
-	<script src="script.js"></script>
-  </body>
+        <!-- Scroll to Top Button-->
+        <a class="scroll-to-top rounded" href="#page-top"><i class="fas fa-angle-up"></i></a>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
 </html>
