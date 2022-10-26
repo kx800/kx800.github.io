@@ -16,6 +16,13 @@
         <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
+        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" /> -->
+        <link rel="stylesheet" href="css/libs/animate.css">
+        <style>
+            .wow:first-child {
+              visibility: hidden;
+            }
+        </style>
     </head>
     <body id="page-top">
         <!-- Navigation-->
@@ -31,7 +38,7 @@
             </ul>
         </nav>
         <!-- Header-->
-        <header class="masthead d-flex align-items-center">
+        <header class="wow slideInDown masthead d-flex align-items-center">
             <div class="container px-4 px-lg-5 text-center">
                 <h1 class="mb-1">Hi! I'm <span>Cassio</span></h1>
                 <h3 class="mb-5">Web Designer / Frontend Developer</h3>
@@ -39,7 +46,7 @@
             </div>
         </header>
         <!-- About-->
-        <section class="content-section bg-light" id="about">
+        <section class="wow slideInDown content-section bg-light" id="about">
             <div class="container px-4 px-lg-5 text-center">
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-lg-10">
@@ -56,7 +63,7 @@
             </div>
         </section>
         <!-- Services-->
-        <section class="content-section bg-primary text-white text-center" id="services">
+        <section class="wow slideInDown content-section bg-primary text-white text-center" id="services">
             <div class="container px-4 px-lg-5">
                 <div class="content-section-heading">
                     <!-- <h3 class="mb-0">Services</h3> -->
@@ -89,7 +96,7 @@
             </div>
         </section>
         <!-- Callout-->
-        <section class="callout">
+        <section class="wow slideInDown callout">
             <div class="container px-4 px-lg-5 text-center">
                 <h2 class="mx-auto mb-5">
                     Feel free to <em>Contact</em>
@@ -98,7 +105,8 @@
                 <p class="lead mb-5">
                     Let's Talk!
                 </p>
-                <a class="btn btn-primary btn-xl" href="mailto:cassioreis@gmail.com">Send me an Email</a>
+                <a class="btn btn-primary btn-xl" href="mailto:cassioreis@gmail.com?
+                &subject=contact from portfolio">Send me an Email</a>
             </div>
         </section>
         <!-- Portfolio-->
@@ -157,30 +165,30 @@
             </div>
         </section> -->
         <!-- Call to Action-->
-        <section class="content-section bg-primary text-white">
+        <section class="wow slideInDown content-section bg-primary text-white">
             <div class="container px-4 px-lg-5 text-center">
                 <h2 class="mb-4">To view or download my resume:</h2>
                 <a class="btn btn-primary btn-xl" href="https://1drv.ms/b/s!ApCXI0QlACEvgRBfQoIl0m4l_jrS?e=MiAhFF" target="_blank">Click here</a>
             </div>
         </section>
         <!-- Map-->
-<!--         <div class="map" id="contact">
+        <!-- <div class="map" id="contact">
             <iframe src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A&amp;output=embed"></iframe>
             <br />
             <small><a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A"></a></small>
         </div> -->
         <!-- Footer-->
-        <footer class="footer text-center">
+        <footer class="wow slideInDown footer text-center">
             <div class="container px-4 px-lg-5">
                 <ul class="list-inline mb-5">
                     <li class="list-inline-item">
-                        <a class="social-link rounded-circle text-white mr-3" href="https://github.com/kx800" target="_blank"><i class="icon-social-github"></i></a>
+                        <a class="social-link rounded-circle text-white mr-3" href="https://github.com/kx800"><i class="icon-social-github"></i></a>
                     </li>
                     <li class="list-inline-item">
-                        <a class="social-link rounded-circle text-white" href="https://www.linkedin.com/in/cassio-r-89926b236/" target="_blank"><i class="icon-social-linkedin"></i></a>
+                        <a class="social-link rounded-circle text-white" href="https://www.linkedin.com/in/cassio-r-89926b236/"><i class="icon-social-linkedin"></i></a>
                     </li>
                 </ul>
-                <p class=" small mb-0">2022</p>
+                <p class=" small mb-0">2022.</p>
             </div>
         </footer>
         <!-- Scroll to Top Button-->
@@ -189,5 +197,19 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
+        <!-- <script src="js/wow.min.js"></script> -->
+        <script src="dist/wow.js"></script>
+        <script>
+          wow = new WOW(
+            {
+              animateClass: 'animated',
+              offset:       100,
+              callback:     function(box) {
+                console.log("WOW: animating <" + box.tagName.toLowerCase() + ">")
+              }
+            }
+          );
+          wow.init();
+        </script>
     </body>
 </html>
