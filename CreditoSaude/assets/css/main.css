@@ -3337,3 +3337,15 @@ section {
   color:var(--color-primary) !important;
 }
 
+/* extras */
+
+::selection{
+  color: var(--color-primary) !important;
+  background: var(--bs-gray-400);
+}
+
+::-moz-selection { /* Code for Firefox */
+  color: var(--color-primary) !important;
+  background: var(--bs-gray-400);
+}
+
