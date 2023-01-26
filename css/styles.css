@@ -11639,7 +11639,7 @@ footer.footer .social-link:hover {
     content: "Web Designer";
   }
   50% {
-    color: white;
+    opacity: 0;
   }
   100% {
     content: "Front End Developer";
@@ -11648,5 +11648,5 @@ footer.footer .social-link:hover {
 
 .letter-changer::after {
   content:"";
-  animation: changeLetter 5s linear infinite alternate;
+  animation: changeLetter 3s linear infinite alternate;
 }
