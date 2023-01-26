@@ -11648,5 +11648,5 @@ footer.footer .social-link:hover {
 
 .letter-changer::after {
   content:"";
-  animation: changeLetter 3s linear infinite alternate;
+  animation: changeLetter 5s linear infinite alternate;
 }
