@@ -3058,7 +3058,7 @@ textarea.form-control-lg {
   background: linear-gradient(315deg, rgb(255, 0, 238) 0%, rgb(255, 170, 0) 100%);;
   /* box-shadow: rgba(112, 70, 255, 0) 0px 0px 0px 0px; */
   opacity: 1;
-  border-radius: 12px;
+  border-radius: 8px;
   color: #fff;
   font-weight:bold;
 }
@@ -11447,7 +11447,7 @@ html {
 }
 
 .btn-xl {
-  padding: 1.0rem 2.0rem;
+  padding: 8px 18px;
 }
 
 .callout {
