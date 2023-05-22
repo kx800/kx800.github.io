@@ -11512,6 +11512,10 @@ footer.footer .social-link:hover {
   padding-top: 8rem;
   padding-bottom: 8rem;
   background: #F0F0F0;
+  /*
+  border-bottom-left-radius: 50% 20%;
+  border-bottom-right-radius: 50% 20%;
+  */
 }
 .masthead h1, .masthead .h1 {
   font-size: 4rem;
