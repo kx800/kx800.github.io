@@ -96,7 +96,6 @@ body {
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   /* background: #0F0F0F; */
-
   /* background-image: linear-gradient(291deg, rgb(153, 0, 255) 0%, rgb(0, 136, 255) 100%); */
   /* background: rgb(34,107,255); */
   background: linear-gradient(315deg, rgb(255, 0, 238) 0%, rgb(255, 170, 0) 100%);;
@@ -11506,17 +11505,30 @@ footer.footer .social-link:hover {
 .masthead {
   min-height: 30rem;
   position: relative;
-  display: table;
+  /*display: table;*/
   width: 100%;
   height: auto;
   padding-top: 8rem;
   padding-bottom: 8rem;
-  background: #F0F0F0;
-  /*
-  border-bottom-left-radius: 50% 20%;
-  border-bottom-right-radius: 50% 20%;
-  */
+  display: flex;
+	background-image:url("../assets/img/13087d.png");
+	/*background-color: #F0F0F0;*/
+	background-size:auto;
+	background-position: left top;
+	/*background-position: center top;*/
+	background-position: center center;
 }
+.masthead::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    /*background-color: rgba(0,0,0,0.25);*/
+	opacity:0.3;
+}
+
 .masthead h1, .masthead .h1 {
   font-size: 4rem;
   margin: 0;
@@ -11640,7 +11652,7 @@ footer.footer .social-link:hover {
 
 @keyframes changeLetter {
   0% {
-    content: "Web Designer";
+    content: "UX/UI Designer";
   }
   50% {
     opacity: 0;
