@@ -11518,16 +11518,7 @@ footer.footer .social-link:hover {
 	/*background-position: center top;*/
 	background-position: center center;
 }
-.masthead::before {
-    content: "";
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    bottom: 0px;
-    left: 0px;
-    /*background-color: rgba(0,0,0,0.25);*/
-	opacity:0.3;
-}
+
 
 .masthead h1, .masthead .h1 {
   font-size: 4rem;
