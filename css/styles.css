@@ -11453,10 +11453,19 @@ html {
   padding: 11rem 0;
   /* background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), url("../assets/img/bg-callout.jpg"); */
   /* background: #0F0F0F; */
-  background:#F0F0F0;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size:auto;
+  /*background:#F0F0F0;*/
+  /*background-position: center center;*/
+  /*background-repeat: no-repeat;*/
+  /*background-size:auto;*/
+  
+  background: repeating-linear-gradient(
+    45deg,
+    #F0F0F0 0px,
+    #F0F0F0 20px,
+    #F8F8F8 20px,
+    #F8F8F8 40px
+  );
+  
 }
 .callout h2, .callout .h2 {
   font-size: 3.5rem;
