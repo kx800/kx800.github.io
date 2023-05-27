@@ -284,6 +284,13 @@ section {
   }
 }
 
+@media (max-width: 480px) {
+  .header .btn-getstarted,
+  .header .btn-getstarted:focus {
+    display:none;
+  }
+}
+
 /*--------------------------------------------------------------
 # Desktop Navigation 
 --------------------------------------------------------------*/
