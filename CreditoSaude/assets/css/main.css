@@ -1147,6 +1147,11 @@ section {
 /*--------------------------------------------------------------
 # Featured Services Section
 --------------------------------------------------------------*/
+
+#services{
+	background:linear-gradient(0deg, rgba(221,221,221,1) 13%, rgba(248,248,248,1) 75%);
+}
+
 .featured-services .service-item {
   padding: 30px;
   transition: all ease-in-out 0.4s;
