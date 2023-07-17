@@ -11458,6 +11458,7 @@ html {
   /*background-repeat: no-repeat;*/
   /*background-size:auto;*/
   
+/*  
   background: repeating-linear-gradient(
     45deg,
     #F0F0F0 0px,
@@ -11465,8 +11466,12 @@ html {
     #F8F8F8 20px,
     #F8F8F8 40px
   );
+  */
   
+  background:
+  	linear-gradient(90deg, rgba(221,221,221,1) 13%, rgba(248,248,248,1) 75%) transparent
 }
+
 .callout h2, .callout .h2 {
   font-size: 3.5rem;
   font-weight: 700;
