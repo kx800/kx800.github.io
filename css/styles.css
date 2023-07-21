@@ -1,15 +1,5 @@
 @charset "UTF-8";
-/*!
-* Start Bootstrap - Stylish Portfolio v6.0.5 (https://startbootstrap.com/theme/stylish-portfolio)
-* Copyright 2013-2022 Start Bootstrap
-* Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-stylish-portfolio/blob/master/LICENSE)
-*/
-/*!
- * Bootstrap v5.1.3 (https://getbootstrap.com/)
- * Copyright 2011-2021 The Bootstrap Authors
- * Copyright 2011-2021 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
- */
+
 :root {
   --bs-blue: #1D809F;
   --bs-indigo: #6610f2;
@@ -11449,16 +11439,19 @@ html {
   padding: 8px 18px;
 }
 
+.callout-outter{
+  background: linear-gradient(90deg, rgba(221,221,221,1) 13%, rgba(248,248,248,1) 75%) transparent;
+  padding: 5rem;
+}
+
 .callout {
-  padding: 11rem 0;
-  /* background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), url("../assets/img/bg-callout.jpg"); */
+  padding: 5rem;
   /* background: #0F0F0F; */
   /*background:#F0F0F0;*/
   /*background-position: center center;*/
   /*background-repeat: no-repeat;*/
   /*background-size:auto;*/
-  
-/*  
+
   background: repeating-linear-gradient(
     45deg,
     #F0F0F0 0px,
@@ -11466,17 +11459,20 @@ html {
     #F8F8F8 20px,
     #F8F8F8 40px
   );
-  */
   
-  background:
-  	linear-gradient(90deg, rgba(221,221,221,1) 13%, rgba(248,248,248,1) 75%) transparent
+}
+
+@media (max-width: 576px) {
+  .callout {
+    padding:0 !important;
+  }
 }
 
 .callout h2, .callout .h2 {
-  font-size: 3.5rem;
+  font-size: calc(2rem + 0.9vw);
   font-weight: 700;
   display: block;
-  max-width: 30rem;
+  /*max-width: 30rem;*/
 }
 
 footer.footer {
