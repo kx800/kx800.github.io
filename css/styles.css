@@ -11463,7 +11463,7 @@ html {
 }
 
 @media (max-width: 576px) {
-  .callout {
+  .callout, .callout-outter {
     padding:0 !important;
   }
 }
