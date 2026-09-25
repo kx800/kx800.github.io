@@ -34,6 +34,12 @@
   display: block !important;
 }
 
+/* text color (light mode only; dark mode keeps Bootstrap's light text) */
+
+[data-bs-theme="light"] .text-body-emphasis {
+  color: #292929 !important;
+}
+
 /* Sphere */
 
 @property --angle {
