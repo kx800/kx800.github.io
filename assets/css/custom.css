@@ -1,89 +1,37 @@
-/* night/day mode button  */
-
-.bd-placeholder-img {
-    font-size: 1.125rem;
-    text-anchor: middle;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    user-select: none
-}
-
-@media (min-width: 768px) {
-    .bd-placeholder-img-lg {
-        font-size: 3.5rem
-    }
-}
-
-.b-example-divider {
-    width: 100%;
-    height: 3rem;
-    background-color: #0000001a;
-    border: solid rgba(0, 0, 0, .15);
-    border-width: 1px 0;
-    box-shadow: inset 0 .5em 1.5em #0000001a, inset 0 .125em .5em #00000026
-}
-
-.b-example-vr {
-    flex-shrink: 0;
-    width: 1.5rem;
-    height: 100vh
-}
+/* night/day mode button */
 
 .bi {
-    vertical-align: -.125em;
-    fill: currentColor
-}
-
-.nav-scroller {
-    position: relative;
-    z-index: 2;
-    height: 2.75rem;
-    overflow-y: hidden
-}
-
-.nav-scroller .nav {
-    display: flex;
-    flex-wrap: nowrap;
-    padding-bottom: 1rem;
-    margin-top: -1px;
-    overflow-x: auto;
-    text-align: center;
-    white-space: nowrap;
-    -webkit-overflow-scrolling: touch
+  vertical-align: -.125em;
+  fill: currentColor;
 }
 
 .btn-bd-primary {
-    --bd-violet-bg:
-        #000;
-    --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
-    --bs-btn-font-weight: 600;
-    --bs-btn-color:
-        var(--bs-white);
-    --bs-btn-bg: var(--bd-violet-bg);
-    --bs-btn-border-color: var(--bd-violet-bg);
-    --bs-btn-hover-color:
-        var(--bs-white);
-    --bs-btn-hover-bg: #ccc;
-    --bs-btn-hover-border-color: #ccc;
-    --bs-btn-focus-shadow-rgb:
-        var(--bd-violet-rgb);
-    --bs-btn-active-color: var(--bs-btn-hover-color);
-    --bs-btn-active-bg:
-        #000;
-    --bs-btn-active-border-color: #000
+  --bd-violet-bg: #000;
+  --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+  --bs-btn-font-weight: 600;
+  --bs-btn-color: var(--bs-white);
+  --bs-btn-bg: var(--bd-violet-bg);
+  --bs-btn-border-color: var(--bd-violet-bg);
+  --bs-btn-hover-color: var(--bs-white);
+  --bs-btn-hover-bg: #ccc;
+  --bs-btn-hover-border-color: #ccc;
+  --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+  --bs-btn-active-color: var(--bs-btn-hover-color);
+  --bs-btn-active-bg: #000;
+  --bs-btn-active-border-color: #000;
 }
 
 .bd-mode-toggle {
-    z-index: 1500
+  z-index: 1500;
 }
 
 .bd-mode-toggle .bi {
-    width: 1em;
-    height: 1em
+  width: 1em;
+  height: 1em;
 }
 
 .bd-mode-toggle .dropdown-menu .active .bi {
-    display: block !important
+  display: block !important;
 }
 
 /* Sphere */
@@ -110,27 +58,27 @@
 
 /* Orb background */
 .orb {
-  position: relative; /* ✅ anchor pseudo-elements */
+  position: relative; /* anchor pseudo-elements */
   display: grid;
   grid-template-areas: "stack";
   inline-size: min(80vmin, 100%);
   aspect-ratio: 1;
   overflow: hidden;
   border-radius: 50%;
-  isolation: isolate; /* ✅ keeps blend modes contained */
+  isolation: isolate; /* keeps blend modes contained */
 
   &::before,
   &::after {
     content: "";
     grid-area: stack;
-    position: absolute; /* ✅ ensures perfect overlay */
-    inset: 0;           /* ✅ replaces width/height 100% */
+    position: absolute;
+    inset: 0;
     border-radius: 50%;
     transform: translateZ(0);
     pointer-events: none;
   }
 
-  /* 🌈 Plasma / energy layer */
+  /* Plasma / energy layer */
   &::before {
     z-index: 1;
 
@@ -177,7 +125,7 @@
     animation: rotate 20s linear infinite;
   }
 
-  /* ✨ Grain / atmosphere layer */
+  /* Grain / atmosphere layer */
   &::after {
     z-index: 2;
 
@@ -195,46 +143,20 @@
   }
 }
 
-
-/* SVG overlay */
-.svg-overlay {
-  position: absolute;
-  inset: 7.5%;        /* = 85% size without math */
-  z-index: 2;
-  opacity: 0.5;
-  pointer-events: none;
-}
-
-
 @keyframes rotate {
   to {
     --angle: 360deg;
   }
 }
 
-    .overlay-container {
-      position: relative;
-      width: 100%;
-      height: 100%;
-      overflow:hidden;
-    }
-
-    .overlay-content {
-      position: relative;
-      z-index: 1;
-    }
-
-    .svg-overlay {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 85%;
-      height: 85%;
-      transform: translate(-50%, -50%);
-      opacity: 0.5; /* Change to desired transparency */
-      z-index: 2;
-      pointer-events: none; /* Allows clicks to pass through */
-    }
+/* Logo overlay on the orb (85% size, centered) */
+.svg-overlay {
+  position: absolute;
+  inset: 7.5%;
+  z-index: 2;
+  opacity: 0.5;
+  pointer-events: none;
+}
 
 /* hero */
 
@@ -242,11 +164,11 @@
   font-size: 3rem;
   font-weight: 300;
   text-align: center;
-  margin-bottom:0
+  margin-bottom: 0;
 }
 
 .hero .hero-title {
-  font-size: 14rem ;
+  font-size: 14rem;
   font-weight: 800;
   text-align: center;
 }
