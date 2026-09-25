@@ -1,0 +1,268 @@
+/* night/day mode button  */
+
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none
+}
+
+@media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+        font-size: 3.5rem
+    }
+}
+
+.b-example-divider {
+    width: 100%;
+    height: 3rem;
+    background-color: #0000001a;
+    border: solid rgba(0, 0, 0, .15);
+    border-width: 1px 0;
+    box-shadow: inset 0 .5em 1.5em #0000001a, inset 0 .125em .5em #00000026
+}
+
+.b-example-vr {
+    flex-shrink: 0;
+    width: 1.5rem;
+    height: 100vh
+}
+
+.bi {
+    vertical-align: -.125em;
+    fill: currentColor
+}
+
+.nav-scroller {
+    position: relative;
+    z-index: 2;
+    height: 2.75rem;
+    overflow-y: hidden
+}
+
+.nav-scroller .nav {
+    display: flex;
+    flex-wrap: nowrap;
+    padding-bottom: 1rem;
+    margin-top: -1px;
+    overflow-x: auto;
+    text-align: center;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch
+}
+
+.btn-bd-primary {
+    --bd-violet-bg:
+        #000;
+    --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+    --bs-btn-font-weight: 600;
+    --bs-btn-color:
+        var(--bs-white);
+    --bs-btn-bg: var(--bd-violet-bg);
+    --bs-btn-border-color: var(--bd-violet-bg);
+    --bs-btn-hover-color:
+        var(--bs-white);
+    --bs-btn-hover-bg: #ccc;
+    --bs-btn-hover-border-color: #ccc;
+    --bs-btn-focus-shadow-rgb:
+        var(--bd-violet-rgb);
+    --bs-btn-active-color: var(--bs-btn-hover-color);
+    --bs-btn-active-bg:
+        #000;
+    --bs-btn-active-border-color: #000
+}
+
+.bd-mode-toggle {
+    z-index: 1500
+}
+
+.bd-mode-toggle .bi {
+    width: 1em;
+    height: 1em
+}
+
+.bd-mode-toggle .dropdown-menu .active .bi {
+    display: block !important
+}
+
+/* Sphere */
+
+@property --angle {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+
+:root {
+  --bg: oklch(12.9% 0 264.695); /* Grayscale: Chroma = 0 */
+  --c1: oklch(44.4% 0 26.899);  /* Grayscale */
+  --c2: oklch(85.2% 0 91.936);  /* Grayscale */
+  --c3: oklch(58.8% 0 241.966); /* Grayscale */
+}
+
+.orb-wrapper {
+  position: relative;
+  width: min(80vmin, 100%);
+  aspect-ratio: 1;
+  margin-inline: auto;
+}
+
+/* Orb background */
+.orb {
+  position: relative; /* ✅ anchor pseudo-elements */
+  display: grid;
+  grid-template-areas: "stack";
+  inline-size: min(80vmin, 100%);
+  aspect-ratio: 1;
+  overflow: hidden;
+  border-radius: 50%;
+  isolation: isolate; /* ✅ keeps blend modes contained */
+
+  &::before,
+  &::after {
+    content: "";
+    grid-area: stack;
+    position: absolute; /* ✅ ensures perfect overlay */
+    inset: 0;           /* ✅ replaces width/height 100% */
+    border-radius: 50%;
+    transform: translateZ(0);
+    pointer-events: none;
+  }
+
+  /* 🌈 Plasma / energy layer */
+  &::before {
+    z-index: 1;
+
+    background:
+      conic-gradient(
+        from calc(var(--angle) * 2) at 25% 70%,
+        var(--c3),
+        transparent 20% 80%,
+        var(--c3)
+      ),
+      conic-gradient(
+        from calc(var(--angle) * 2) at 45% 75%,
+        var(--c2),
+        transparent 30% 60%,
+        var(--c2)
+      ),
+      conic-gradient(
+        from calc(var(--angle) * -3) at 80% 20%,
+        var(--c1),
+        transparent 40% 60%,
+        var(--c1)
+      ),
+      conic-gradient(
+        from calc(var(--angle) * 2) at 15% 5%,
+        var(--c2),
+        transparent 10% 90%,
+        var(--c2)
+      ),
+      conic-gradient(
+        from calc(var(--angle) * 1) at 20% 80%,
+        var(--c1),
+        transparent 10% 90%,
+        var(--c1)
+      ),
+      conic-gradient(
+        from calc(var(--angle) * -2) at 85% 10%,
+        var(--c3),
+        transparent 20% 80%,
+        var(--c3)
+      );
+
+    box-shadow: inset var(--bg) 0 0 5vmin 1vmin;
+    filter: blur(3vmin) contrast(5);
+    animation: rotate 20s linear infinite;
+  }
+
+  /* ✨ Grain / atmosphere layer */
+  &::after {
+    z-index: 2;
+
+    --dot: 1.5px;
+
+    background-image: radial-gradient(
+      circle at center,
+      var(--bg) var(--dot),
+      transparent var(--dot)
+    );
+    background-size: calc(var(--dot) * 2) calc(var(--dot) * 2);
+    mask-image: radial-gradient(black 25%, transparent 75%);
+    backdrop-filter: blur(8vmin) contrast(10);
+    mix-blend-mode: overlay;
+  }
+}
+
+
+/* SVG overlay */
+.svg-overlay {
+  position: absolute;
+  inset: 7.5%;        /* = 85% size without math */
+  z-index: 2;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+
+@keyframes rotate {
+  to {
+    --angle: 360deg;
+  }
+}
+
+    .overlay-container {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      overflow:hidden;
+    }
+
+    .overlay-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .svg-overlay {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 85%;
+      height: 85%;
+      transform: translate(-50%, -50%);
+      opacity: 0.5; /* Change to desired transparency */
+      z-index: 2;
+      pointer-events: none; /* Allows clicks to pass through */
+    }
+
+/* hero */
+
+.hero .hero-text {
+  font-size: 3rem;
+  font-weight: 300;
+  text-align: center;
+  margin-bottom:0
+}
+
+.hero .hero-title {
+  font-size: 14rem ;
+  font-weight: 800;
+  text-align: center;
+}
+
+/* links */
+
+ul.links li {
+  font-size: clamp(4rem, 8vw, 7rem);
+  font-weight: 700;
+  margin-bottom: clamp(-1rem, -1vw, -3rem);
+}
+
+ul.links li a {
+  text-decoration: none;
+}
+
+ul.links li a:hover {
+  opacity: 0.9;
+}

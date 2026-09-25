@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Cas &mdash; UX/UI Engineer portfolio">
+    <title>Cas &mdash; UX/UI Engineer</title>
+    <script src="assets/js/color-modes.js"></script>
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <link href="assets/css/custom.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- day/night mode icons -->
+    <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+        <symbol id="check2" viewBox="0 0 16 16">
+            <path
+                d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z">
+            </path>
+        </symbol>
+        <symbol id="circle-half" viewBox="0 0 16 16">
+            <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"></path>
+        </symbol>
+        <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+            <path
+                d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z">
+            </path>
+            <path
+                d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z">
+            </path>
+        </symbol>
+        <symbol id="sun-fill" viewBox="0 0 16 16">
+            <path
+                d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z">
+            </path>
+        </symbol>
+    </svg>
+
+    <!-- day/night mode -->
+    <div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle"> <button
+            class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center" id="bd-theme" type="button"
+            aria-expanded="false" data-bs-toggle="dropdown" aria-label="Toggle theme (auto)"> <svg
+                class="bi my-1 theme-icon-active" aria-hidden="true">
+                <use href="#circle-half"></use>
+            </svg> <span class="visually-hidden" id="bd-theme-text">Toggle theme</span> </button>
+        <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
+            <li> <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light"
+                    aria-pressed="false"> <svg class="bi me-2 opacity-50" aria-hidden="true">
+                        <use href="#sun-fill"></use>
+                    </svg>
+                    Light
+                    <svg class="bi ms-auto d-none" aria-hidden="true">
+                        <use href="#check2"></use>
+                    </svg> </button> </li>
+            <li> <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark"
+                    aria-pressed="false"> <svg class="bi me-2 opacity-50" aria-hidden="true">
+                        <use href="#moon-stars-fill"></use>
+                    </svg>
+                    Dark
+                    <svg class="bi ms-auto d-none" aria-hidden="true">
+                        <use href="#check2"></use>
+                    </svg> </button> </li>
+            <li> <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto"
+                    aria-pressed="true"> <svg class="bi me-2 opacity-50" aria-hidden="true">
+                        <use href="#circle-half"></use>
+                    </svg>
+                    Auto
+                    <svg class="bi ms-auto d-none" aria-hidden="true">
+                        <use href="#check2"></use>
+                    </svg> </button> </li>
+        </ul>
+    </div>
+    <main>
+        <div class="container">
+            <header class="d-flex flex-wrap justify-content-center py-3 mb-4">
+                <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+                    <svg class="bi me-2" width="40" height="40" aria-hidden="true">
+                        <path d="M20.2651 0C29.836 0 37.8574 6.54813 39.9802 15.3527H29.0795C27.3843 12.2404 24.0541 10.1245 20.223 10.1245C14.6734 10.1245 10.1746 14.5645 10.1746 20.0415C10.1746 25.5185 14.6734 29.9585 20.223 29.9585C24.1218 29.9585 27.5019 27.7671 29.1679 24.5643H40C37.9076 33.4106 29.8661 40 20.2651 40C9.07296 40 0 31.0457 0 20C0 8.95427 9.07296 0 20.2651 0Z" />
+                    </svg>
+                </a>
+                <ul class="nav nav-pills">
+                    <li class="nav-item"><a href="#About" class="nav-link text-body-emphasis">About</a></li>
+                    <li class="nav-item"><a href="#Links" class="nav-link text-body-emphasis">Links</a></li>
+                </ul>
+            </header>
+            <!-- hero -->
+            <div class="container col-xxl-12 px-4">
+                <div class="row flex-lg-row-reverse align-items-center g-5">
+                    <div class="col-lg-6 container-orb">
+            
+                    <div class="orb-wrapper">
+                    <div class="orb"></div>
+
+                    <svg class="svg-overlay"
+                        viewBox="0 0 40 40"
+                        xmlns="http://www.w3.org/2000/svg"
+                        aria-hidden="true">
+                        <path
+                        d="M20.2651 0C29.836 0 37.8574 6.54813 39.9802 15.3527H29.0795C27.3843 12.2404 24.0541 10.1245 20.223 10.1245C14.6734 10.1245 10.1746 14.5645 10.1746 20.0415C10.1746 25.5185 14.6734 29.9585 20.223 29.9585C24.1218 29.9585 27.5019 27.7671 29.1679 24.5643H40C37.9076 33.4106 29.8661 40 20.2651 40C9.07296 40 0 31.0457 0 20C0 8.95427 9.07296 0 20.2651 0Z"
+                        fill="#292929"/>
+                    </svg>
+                    </div>
+
+            
+                    </div>
+                    <div class="col-lg-6 hero">
+                        <p class="hero-text">Hi! I am</p>
+                        <h1 class="hero-title fw-bold text-body-emphasis lh-1 mb-3">Cas
+                        </h1>
+                        <p class="hero-text">UX/UI Engineer</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="About" class="container col-xxl-12 px-4 pt-5 pb-0">
+                <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+                    <div class="col-lg-6">
+                        <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">About
+                        </h1>
+                        <p class="lead">I am a seasoned technologist specialized in user experience, user interface design, and front-end development. With many years of experience, I’ve had the opportunity to work with leading companies, contributing to high-impact digital products. I bring a sharp eye for design and detail to every project, ensuring that functionality and aesthetics go hand in hand. Passionate about continuous learning, I stay up to date with the latest tools and technologies to deliver modern, intuitive, and engaging user experiences.</p>
+                    </div>
+                    <div class="col-lg-6"> <img src="img-about2.png"
+                            class="d-block mx-lg-auto img-fluid rounded-4" alt="" width="700" height="500"
+                            loading="lazy"> </div>
+                </div>
+            </div>
+
+            <div id="Links" class="container col-xxl-12 pb-5 px-4">
+                <ul class="list-unstyled links">
+                    <li><a class="text-body-emphasis" href="#" onclick="alert('Coming Soon')">Work</a></li>
+                    <li><a class="text-body-emphasis" href="https://dribbble.com/kc486" target="_blank">Dribbble</a></li>
+                    <li><a class="text-body-emphasis" href="https://github.com/kx800" target="_blank">Github</a></li>
+                    <li><a class="text-body-emphasis" href="#" onclick="alert('Coming Soon')">Resume</a></li>
+                    <li><a class="text-body-emphasis" href="https://www.linkedin.com/in/cassio-r-89926b236/" target="_blank">Linkedin</a></li>
+                    <li><a class="text-body-emphasis" href="mailto:cassioreis79@hotmail.com">Email</a></li>
+                </ul>
+            </div>
+
+            <!-- footer -->    
+            <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+                <p>&copy; 2025. All rights reserved.</p>
+                <ul class="list-unstyled d-flex">
+                    <li class="ms-3"><a class="link-body-emphasis" href="#" aria-label="Instagram"><svg class="bi"
+                                width="24" height="24">
+                                <use xlink:href="#instagram"></use>
+                            </svg></a></li>
+                    <li class="ms-3"><a class="link-body-emphasis" href="#" aria-label="Facebook"><svg class="bi"
+                                width="24" height="24" aria-hidden="true">
+                                <use xlink:href="#facebook"></use>
+                            </svg></a></li>
+                </ul>
+            </div>
+
+        </div><!-- container -->
+    </main>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
